@@ -1,0 +1,64 @@
+# HF -> VATSIM VHF alias mapping
+#
+# Format:   HF_MHz = VHF_MHz   ; station / comment
+#   - HF is written in MHz exactly like the PMDG 777 shows it (2.000 - 29.999), e.g. 5.649
+#   - Lines starting with '#' and empty lines are ignored
+#   - An entry with an EMPTY VHF value is a placeholder and is ignored until filled in
+#   - If an HF frequency appears twice, the last entry wins
+# The file is reloaded automatically while the tool is running.
+#
+# Confidence legend in the comments:
+#   [official]  taken from an official VATSIM facility document
+#   [check]     read from a PDF table with a messy layout - please verify
+#   [todo]      real-world frequency without a known VATSIM alias - community, please fill in
+#
+# ----------------------------------------------------------------------------------------
+# Shanwick Oceanic (EGGX) / Gander Oceanic (CZQO)
+# Source: "Shanwick (EGGX) & Gander (CZQO) Oceanic Control Procedures", revision 2023/08
+#         https://ganderoceanic.ca/assets/resources/files/atc/ShanwickEGGXGanderCZQOOceanicControlProcedures.pdf
+# ----------------------------------------------------------------------------------------
+5.649  = 131.900   ; NAT_FSS (NAT Bandbox)                    [official]
+6.547  = 131.800   ; Shanwick (EGGX_CTR)                      [official]
+8.906  = 131.450   ; Shanwick Alpha (EGGX_A_CTR)              [official]
+2.899  = 131.550   ; Shanwick Bravo (EGGX_B_CTR)              [official]
+8.879  = 131.650   ; Shanwick Charlie (EGGX_C_CTR)            [official]
+10.021 = 131.750   ; Shanwick Delta (EGGX_D_CTR)              [official]
+6.622  = 131.850   ; Shanwick Foxtrot (EGGX_F_CTR)            [official]
+
+# Gander table columns are shifted by one row in the PDF text, pairing below is derived by position:
+8.864  = 131.700   ; Gander (CZQO_CTR)                        [check]
+3.016  = 131.575   ; Gander Alpha (CZQO_A_CTR)                [check]
+5.616  = 131.675   ; Gander Bravo (CZQO_B_CTR)                [check]
+2.872  = 131.775   ; Gander Charlie (CZQO_C_CTR)              [check]
+4.675  = 131.875   ; Gander Delta (CZQO_D_CTR)                [check]
+13.291 = 131.975   ; Gander Foxtrot (CZQO_F_CTR)              [check]
+
+# ----------------------------------------------------------------------------------------
+# New York Oceanic (KZWY, non-radar sectors)
+# Source: "ZWY Oceanic Briefing", vZNY ARTCC (PDF dated 2021-01)
+#         https://zny-uploads.s3.us-east-1.amazonaws.com/documents/Oceanic%20Pilot%20Briefing.pdf
+# HF and alias columns were paired by order of appearance - please verify.
+# ----------------------------------------------------------------------------------------
+5.520  = 130.000   ; New York Oceanic                         [check]
+6.586  = 130.100   ; New York Oceanic                         [check]
+8.918  = 130.200   ; New York Oceanic                         [check]
+11.330 = 130.300   ; New York Oceanic                         [check]
+6.628  = 130.500   ; New York Oceanic                         [check]
+8.825  = 130.600   ; New York Oceanic                         [check]
+17.946 = 130.900   ; New York Oceanic (also real NAT-A freq)  [check]
+
+# ----------------------------------------------------------------------------------------
+# Placeholders: real-world NAT family frequencies with no known VATSIM alias yet.
+# (Frequency lists: https://wiki.radioreference.com/index.php/MWARA - state Nov 2020)
+# ----------------------------------------------------------------------------------------
+5.598  =           ; NAT-A                                    [todo]
+11.396 =           ; NAT-A                                    [todo]
+13.306 =           ; NAT-A                                    [todo]
+21.925 =           ; NAT-A                                    [todo]
+11.336 =           ; NAT-C                                    [todo]
+11.279 =           ; NAT (family unknown)                     [todo]
+
+# ----------------------------------------------------------------------------------------
+# Other oceanic areas without any VATSIM alias known to me. Add entries here, e.g.:
+#   Santa Maria Oceanic, Reykjavik, Bodo, Piarco, Pacific (Oakland, Anchorage, Tahiti, Auckland, ...)
+# ----------------------------------------------------------------------------------------
