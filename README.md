@@ -34,7 +34,7 @@ Good to know:
 - HF is also treated as "in use" when only the panel 1 MIC is on HF, otherwise you would transmit on the old VHF frequency.
 
 ## Installation
-
+Download: [777HfBridge.zip](https://github.com/Godehardt2003/PMDG-777-HighFrequency-vPilot-Support/releases)
 1. Close vPilot.
 2. Copy `Pmdg777HfBridge.dll` **and** `hf-vhf-mapping.txt` into `%LOCALAPPDATA%\vPilot\Plugins\`.
 3. Start vPilot and MSFS. The plugin connects automatically, in any order.
