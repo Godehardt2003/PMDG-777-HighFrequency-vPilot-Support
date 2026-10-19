@@ -36,8 +36,11 @@ Good to know:
 ## Installation
 Download: [777HfBridge.zip](https://github.com/Godehardt2003/PMDG-777-HighFrequency-vPilot-Support/releases)
 1. Close vPilot.
-2. Copy `Pmdg777HfBridge.dll` **and** `hf-vhf-mapping.txt` into `%LOCALAPPDATA%\vPilot\Plugins\`.
-3. Start vPilot and MSFS. The plugin connects automatically, in any order.
+2. Extract the ZIP with **WinRAR** or **7-Zip**, not with the built-in Windows extractor.
+3. Copy `Pmdg777HfBridge.dll` **and** `hf-vhf-mapping.txt` into `%LOCALAPPDATA%\vPilot\Plugins\`.
+4. Start vPilot and MSFS. The plugin connects automatically, in any order.
+
+> **Plugin doesn't work at all?** Windows may have blocked the DLL. Right-click `Pmdg777HfBridge.dll` -> Properties -> tick **Unblock** (or "Allow") -> OK, then restart vPilot.
 
 A log is written to `Pmdg777HfBridge.log` next to the DLL and to vPilot's debug messages (prefix `[HF]`).
 
